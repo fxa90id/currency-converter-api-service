@@ -9,7 +9,7 @@ from ..exchanges.binance_currency_exchange import BinanceCurrencyExchange
 
 class CurrencyExchangeService:
 
-    async def get_exchange_rate(self, ccy_from: str, ccy_to: str):
+    async def get_exchange_rate(self, ccy_from: str, ccy_to: str) -> float:
         from_price = await self._get_price(ccy_from)
         to_price = await self._get_price(ccy_to)
         return from_price / to_price
