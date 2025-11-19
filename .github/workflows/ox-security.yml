@@ -10,6 +10,7 @@ on:
 jobs:
   security:
     runs-on: ubuntu-latest
+    environment: ox-security-scan-env
     steps:
       - name: Run OX Security Scan to check for vulnerabilities
         with:
